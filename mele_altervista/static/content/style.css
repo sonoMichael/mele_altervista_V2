@@ -1,0 +1,49 @@
+.gray {
+    background: gray;
+}
+
+.homeButton {
+    margin: 0;
+    padding: 0;
+    font-size: 6rem;
+    font-weight: bold;
+    line-height: 0.8;
+    color: white;
+    cursor: default;
+}
+
+.mb-6 {
+    margin-bottom: 6rem;
+}
+
+.pe-6 {
+    padding-right: 6rem;
+}
+
+.title-container {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    width: max-content;
+    height: max-content;
+    color: white;
+    cursor: default;
+    transform: perspective(13px) rotateX(1deg) rotateY(-0.5deg) rotateZ(-2deg);
+    -webkit-text-stroke: 1px #282828;
+    text-shadow: 4px 4px 4px #282828;
+    margin-top: 4rem;
+    margin-right: 17rem;
+}
+
+.title {
+    font-size: 7rem;
+}
+
+.subtitle {
+    font-size: 4rem;
+}
+
+.hint-btns {
+    cursor: default;
+}
