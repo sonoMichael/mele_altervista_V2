@@ -1,16 +1,21 @@
 window.onload = function () {
+    function getProfile() {
 
-    function createProfile(): void {
-        console.log("si");
     }
 
-    const btnsContainer = document.getElementById("home-btns-container");
-
-    let profile_btn = createBtn("profile", createProfile());
-    let projects_btn = createBtn("projects", createProfile());
-    let contacts_btn = createBtn("contacts", createProfile());
-    console.log("cioan");
+    function getProjects() {
 
 
-    console.log(btnsContainer);
+    }
+    function getContacts() {
+
+    }
+
+    let profile_btn = document.getElementById("profile");
+    let projects_btn = document.getElementById("projects");
+    let contacts_btn = document.getElementById("contacts");
+
+    document.addEventListener("click", getProfile);
+    document.addEventListener("click", getProjects);
+    document.addEventListener("click", getContacts);
 }
