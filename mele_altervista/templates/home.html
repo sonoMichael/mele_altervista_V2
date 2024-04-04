@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+<div class="title-container">
+    <div class="title">Michael Zhao</div>
+    <div class="subtitle">Portfolio</div>
+</div>
+<div id="home-btns-container" class="home-buttons-container mb-6">
+    {% for i in range(0, num_btns) %}
+    <div class="home-button pe-6">
+        <div id="{{ home_btns[i] }}" class="on-hover"></div>
+        <a href="{{ url_for('home') }}">{{ home_btns[i] }}</a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
