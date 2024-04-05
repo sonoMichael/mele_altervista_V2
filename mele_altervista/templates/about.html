@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="page">
+    <div class="page-title">ABOUT</div>
+    <div class="page-content">
+        <div class="profile-container">
+            <div class="profile-img"></div>
+            <div class="profile-content">
+                <div class="p-title">Descrizione</div>
+                <div class="p-content">
+                    <p>{{ desc }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="p-container">
+            <div class="p-title">Work expirience</div>
+            <div class="p-content">
+                <ul>
+                    {% for job in jobs %}
+                    <li>
+                        <h1>{{ job["title"] }}</h1>
+                        <span>{{ job["period"] }}</span>
+                        <span>{{ job["detail"] }}</span>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <a href="#">
+            <div class="more-btn">MORE</div>
+        </a>
+
+    </div>
+</div>
+{% endblock %}

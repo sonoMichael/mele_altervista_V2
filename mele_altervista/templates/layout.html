@@ -10,15 +10,6 @@
 </head>
 
 <body class="body">
-    {% if title != "Portfolio" %}
-    <div class="nav">
-        {% for i in range(0, num_btns) %}
-        <div class="nav-btn">
-            <a href="#">{{ home_btns[i] }}</a>
-        </div>
-        {% endfor %}
-    </div>
-    {% endif %}
     {% block content %}
     {% endblock %}
 </body>
