@@ -1,35 +1,53 @@
-{% extends "layout.html" %}
-{% block content %}
-<div class="page">
-    <div class="page-title">ABOUT</div>
-    <div class="page-content">
-        <div class="profile-container">
-            <div class="profile-img"></div>
-            <div class="profile-content">
-                <div class="p-title">Descrizione</div>
-                <div class="p-content">
-                    <p>{{ desc }}</p>
+<!-- {% extends "layout.html" %}
+{% block content %} -->
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="../static/content/style.css">
+</head>
+
+<body class="body">
+
+
+    <div class="page">
+        <div class="page-title-container">
+            <div class="page-title">ABOUT</div>
+            <div class="page-close-btn"></div>
+        </div>
+        <div class="page-content-container">
+            <div class="profile-container">
+                <div class="profile-img"></div>
+                <div class="profile-content">
+                    <div class="p-title">Descrizione</div>
+                    <div class="p-content">
+                        <p>{{ desc }}</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="p-container">
-            <div class="p-title">Work expirience</div>
-            <div class="p-content">
-                <ul>
-                    {% for job in jobs %}
-                    <li>
-                        <h1>{{ job["title"] }}</h1>
-                        <span>{{ job["period"] }}</span>
-                        <span>{{ job["detail"] }}</span>
-                    </li>
-                    {% endfor %}
-                </ul>
+            <div class="p-container">
+                <div class="p-title">Work expirience</div>
+                <div class="p-content">
+                    <ul>
+                        {% for job in jobs %}
+                        <li>
+                            <h1>{{ job["title"] }}</h1>
+                            <span>{{ job["period"] }}</span>
+                            <span>{{ job["detail"] }}</span>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
             </div>
-        </div>
-        <a href="#">
-            <div class="more-btn">MORE</div>
-        </a>
+            <a href="#">
+                <div class="more-btn">MORE</div>
+            </a>
 
+        </div>
     </div>
-</div>
-{% endblock %}
+
+
+</body>
+
+</html>
+<!-- {% endblock %} -->
