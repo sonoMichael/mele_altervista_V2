@@ -8,15 +8,17 @@ profile_par = "BASTAAAAAAA"
 jobs = [
     {
         "title": "t1",
-        "period": "prx",
+        "period": "2018-2020",
         "detail": "drx"
     },
     {
         "title": "t1 academy",
-        "period": "psg",
+        "period": "2017-2018",
         "detail": "dg"
     }
 ]
+
+pfp = ""
 
 @app.route("/")
 @app.route("/home")
@@ -29,5 +31,15 @@ def home():
 @app.route("/about")
 def about():
     return render_template("about.html",
+                           title = "About",
                            desc = profile_par,
-                           jobs = jobs)
+                           jobs = jobs,
+                           pfp = pfp)
+
+@app.route("/projects")
+def projects():
+    pass
+
+@app.route("/contact")
+def contact():
+    pass

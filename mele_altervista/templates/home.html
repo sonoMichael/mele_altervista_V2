@@ -5,12 +5,12 @@
     <div class="home-title">Michael Zhao</div>
     <div class="home-subtitle">Portfolio</div>
 </div>
-<div id="home-btns-container" class="home-buttons-container mb-6">
-    {% for i in range(0, num_btns) %}
-    <a href="{{ url_for('about') }}">
+<div id="home-btns-container" class="home-buttons-container">
+    {% for btn in home_btns %}
+    <a href="{{ url_for(btn) }}">
         <div class="home-button pe-6">
-            <div id="{{ home_btns[i] }}" class="on-hover"></div>
-            {{ home_btns[i] }}
+            <div id="{{ btn }}" class="on-hover"></div>
+            {{ btn }}
         </div>
     </a>
     {% endfor %}
