@@ -1,14 +1,22 @@
 {% extends "layout.html" %}
 {% block content %}
-{% for proj in projects %}
-<div class="project-container">
-    <div class="project-img-container">
-        <img src="{{ proj.img }}" class="project-img">
+<div class="page">
+    <div class="page-title-container">
+        <div class="page-title">{{ title }}</div>
+        <a class="page-close-btn" href="{{url_for('home')}}"></a>
     </div>
-    <div class="project-content-container">
-        <a href="#" class="project-title">{{ proj.title }}</a>
-        <div class="project-content">{{ proj.detail }}</div>
+    <div class="page-content-container">
+        {% for proj in projects %}
+        <div class="project-container">
+            <div class="project-img-container">
+                <img src="{{ proj.img }}" class="project-img">
+            </div>
+            <div class="project-content-container">
+                <a href="#" class="project-title">{{ proj.title }}</a>
+                <div class="project-content">{{ proj.detail }}</div>
+            </div>
+        </div>
+        {% endfor %}
     </div>
 </div>
-{% endfor %}
 {% endblock %}

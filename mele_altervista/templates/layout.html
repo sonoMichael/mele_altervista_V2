@@ -10,16 +10,8 @@
 </head>
 
 <body class="body">
-    <div class="page">
-        <div class="page-title-container">
-            <div class="page-title">{{ title }}</div>
-            <a class="page-close-btn" href="{{url_for('home')}}"></a>
-        </div>
-        <div class="page-content-container">
-            {% block content %}
-            {% endblock %}
-        </div>
-    </div>
+    {% block content %}
+    {% endblock %}
 </body>
 
 </html>

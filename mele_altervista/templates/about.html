@@ -1,45 +1,55 @@
 {% extends "layout.html" %}
 {% block content %}
-<div class="profile-container">
-    <div class="profile-img-container">
-        {% if pfp %}
-        <img src="{{ pfp }}" alt="pfp">
-        {% else %}
-        <img class="pfp" src="../static/images/pfp.png" alt="pfp">
-        {% endif %}
+<div class="page">
+    <div class="page-title-container">
+        <div class="page-title">{{ title }}</div>
+        <a class="page-close-btn" href="{{url_for('home')}}"></a>
     </div>
-    <div class="profile">
-        <div class="p-title">
-            Descrizione
-        </div>
-        <div class="p-content">
-            <p>{{ desc }}</p>
-        </div>
-    </div>
-</div>
-<div class="p-container">
-    <div class="p-title">
-        <h1>Work expirience</h1>
-    </div>
-    <div class="p-content">
-        <div class="list-container">
-            {% for job in jobs %}
-            <div class="list-element">
-                <div class="list-title">
-                    <div class="p-title">{{ job["title"] }}</div>
-                    <span>{{ job["period"] }}</span>
+    <div class="page-content-container">
+        <div class="profile-container">
+            <div class="profile-img-container">
+                {% if pfp %}
+                <img src="{{ pfp }}" alt="pfp">
+                {% else %}
+                <img class="pfp" src="../static/images/pfp.png" alt="pfp">
+                {% endif %}
+            </div>
+            <div class="profile">
+                <div class="p-title">
+                    <h1>
+                        Descrizione
+                    </h1>
                 </div>
-                <div class="list-content">
-                    <span>{{ job["detail"] }}</span>
+                <div class="p-content">
+                    <p>{{ desc }}</p>
                 </div>
             </div>
-            {% endfor %}
         </div>
+        <div class="p-container">
+            <div class="p-title">
+                <h1>Work expirience</h1>
+            </div>
+            <div class="p-content">
+                <div class="list-container">
+                    {% for job in jobs %}
+                    <div class="list-element">
+                        <div class="list-title">
+                            <div class="p-title">{{ job["title"] }}</div>
+                            <span>{{ job["period"] }}</span>
+                        </div>
+                        <div class="list-content">
+                            <span>{{ job["detail"] }}</span>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <footer class="more-btn-container">
+            <a class="more-btn" href="https://github.com/sonoMichael">
+                <span class="more-btn-text">MORE</span>
+            </a>
+        </footer>
     </div>
 </div>
-<footer class="more-btn-container">
-    <a class="more-btn" href="https://github.com/sonoMichael">
-        <span class="more-btn-text">MORE</span>
-    </a>
-</footer>
 {% endblock %}

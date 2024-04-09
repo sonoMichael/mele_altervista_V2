@@ -1,11 +1,19 @@
 {% extends "layout.html" %}
 {% block content %}
-{% for con in contacts %}
-<a class="contact-container">
-    <div class="contact-img-container">
-        <img src="{{ con.img }}" class="contact-img">
+<div class="page">
+    <div class="page-title-container">
+        <div class="page-title">{{ title }}</div>
+        <a class="page-close-btn" href="{{url_for('home')}}"></a>
     </div>
-    <div class="contact-content">{{ con.title }}</div>
-</a>
-{% endfor %}
+    <div class="page-content-container">
+        {% for con in contacts %}
+        <a class="contact-container">
+            <div class="contact-img-container">
+                <img src="{{ con.img }}" class="contact-img">
+            </div>
+            <div class="contact-content">{{ con.title }}</div>
+        </a>
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}
