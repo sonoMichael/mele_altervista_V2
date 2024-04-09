@@ -7,7 +7,7 @@
     </div>
     <div class="page-content-container">
         {% for con in contacts %}
-        <a class="contact-container">
+        <a class="contact-container" href="{{ con.url }}">
             <div class="contact-img-container">
                 <img src="{{ con.img }}" class="contact-img">
             </div>

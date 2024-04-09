@@ -231,6 +231,7 @@ a {
 .list-title {
     display: inline-flex;
     flex-direction: row;
+    justify-content: space-between;
     vertical-align: baseline;
     gap: 4rem;
 }

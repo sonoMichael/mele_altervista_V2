@@ -7,14 +7,14 @@ profile_par = "BASTAAAAAAA"
 
 jobs = [
     {
-        "title": "t1",
-        "period": "2018-2020",
-        "detail": "drx"
+        "title": "Barman",
+        "period": "04/2023-08/2023",
+        "detail": "Molino delle Armi"
     },
     {
-        "title": "t1 academy",
-        "period": "2017-2018",
-        "detail": "dg"
+        "title": "Waiter",
+        "period": "06/2022-09/2022",
+        "detail": "INARI Sushi Restaurant"
     }
 ]
 
@@ -23,28 +23,27 @@ pfp = ""
 proj = [
     {
         "img": "../static/images/GBwHKo8akAAvcfP.jpg",
-        "title": "title",
-        "detail": "details"
-    },
-    {
-        "img": "",
-        "title": "title",
-        "detail": "details"
+        "title": "Untitle",
+        "detail": "Details",
+        "url": ""
     }
 ]
 
 cont = [
     {
         "img": "../static/images/mail.png",
-        "title": "Personal mail"
+        "title": "Personal mail",
+        "url": "mailto:zhaomichael.business@gmail.com",
     },
     {
         "img": "../static/images/linkedin.png",
-        "title": "Linkedin"
+        "title": "Linkedin",
+        "url": "https://www.linkedin.com/in/michael-zhao-60a50829b/"
     },
     {
         "img": "../static/images/github.png",
-        "title": "Github"
+        "title": "Github",
+        "url": "https://github.com/sonoMichael"
     }
 ]
 
