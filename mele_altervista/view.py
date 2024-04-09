@@ -22,7 +22,7 @@ pfp = ""
 
 proj = [
     {
-        "img": "../static/images/GBwHKo8akAAvcfP.jpg",
+        "img": "../static/images/projects/GBwHKo8akAAvcfP.jpg",
         "title": "Untitle",
         "detail": "Details",
         "url": ""
@@ -31,17 +31,17 @@ proj = [
 
 cont = [
     {
-        "img": "../static/images/mail.png",
+        "img": "../static/images/contacts/mail.png",
         "title": "Personal mail",
         "url": "mailto:zhaomichael.business@gmail.com",
     },
     {
-        "img": "../static/images/linkedin.png",
+        "img": "../static/images/contacts/linkedin.png",
         "title": "Linkedin",
         "url": "https://www.linkedin.com/in/michael-zhao-60a50829b/"
     },
     {
-        "img": "../static/images/github.png",
+        "img": "../static/images/contacts/github.png",
         "title": "Github",
         "url": "https://github.com/sonoMichael"
     }
