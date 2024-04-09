@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+{% for con in contacts %}
+<a class="contact-container">
+    <div class="contact-img-container">
+        <img src="{{ con.img }}" class="contact-img">
+    </div>
+    <div class="contact-content">{{ con.title }}</div>
+</a>
+{% endfor %}
+{% endblock %}

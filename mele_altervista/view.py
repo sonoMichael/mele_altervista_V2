@@ -20,6 +20,34 @@ jobs = [
 
 pfp = ""
 
+proj = [
+    {
+        "img": "../static/images/GBwHKo8akAAvcfP.jpg",
+        "title": "title",
+        "detail": "details"
+    },
+    {
+        "img": "",
+        "title": "title",
+        "detail": "details"
+    }
+]
+
+cont = [
+    {
+        "img": "../static/images/mail.png",
+        "title": "Personal mail"
+    },
+    {
+        "img": "../static/images/linkedin.png",
+        "title": "Linkedin"
+    },
+    {
+        "img": "../static/images/github.png",
+        "title": "Github"
+    }
+]
+
 @app.route("/")
 @app.route("/home")
 def home():
@@ -38,8 +66,12 @@ def about():
 
 @app.route("/projects")
 def projects():
-    pass
+    return render_template("projects.html",
+                           title = "Projects",
+                           projects = proj)
 
 @app.route("/contact")
 def contact():
-    pass
+    return render_template("contact.html",
+                           title = "Contact",
+                           contacts = cont)
