@@ -8,20 +8,20 @@
     <div class="page-content-container">
         <div class="profile-container">
             <div class="profile-img-container">
-                {% if pfp %}
-                <img src="{{ pfp }}" alt="pfp">
+                {% if description.photo %}
+                <img src="{{ description.photo }}" alt="pfp">
                 {% else %}
-                <img class="pfp" src="../static/images/pfp.png" alt="pfp">
+                <img class="pfp" src="{{../static/images/pfp.png}}" alt="pfp">
                 {% endif %}
             </div>
             <div class="profile">
                 <div class="p-title">
                     <h1>
-                        Descrizione
+                        {{ description.name }} {{ description.surname }}
                     </h1>
                 </div>
                 <div class="p-content">
-                    <p>{{ desc }}</p>
+                    <p>{{ description.summery }}</p>
                 </div>
             </div>
         </div>
