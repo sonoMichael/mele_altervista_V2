@@ -4,7 +4,7 @@ import os
 engine = create_engine(os.getenv("DB_CONNECTION_STRING"),
                        connect_args={
                            "ssl": {
-                               "ssl_ca": ""
+                               'sslmode': 'REQUIRED'
                            }
                        })
 
