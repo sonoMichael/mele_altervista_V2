@@ -1,6 +1,5 @@
 from flask import Flask, render_template
-from mele_altervista import app
-from mele_altervista  import database
+from mele_altervista import app, database
 
 home_btns = ["about", "projects", "contact"]
 
