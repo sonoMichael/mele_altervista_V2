@@ -8,8 +8,8 @@
     <div class="page-content-container">
         <div class="profile-container">
             <div class="profile-img-container">
-                {% if description.photo %}
-                <img src="{{ description.photo }}" alt="pfp">
+                {% if description.image %}
+                <img src="data:image/png;charset=utf.8;base64,{{ description.image }}" alt="pfp">
                 {% else %}
                 <img class="pfp" src="../static/images/pfp.png" alt="pfp">
                 {% endif %}
@@ -34,11 +34,11 @@
                     {% for job in jobs %}
                     <div class="list-element">
                         <div class="list-title">
-                            <div class="p-title">{{ job["title"] }}</div>
-                            <span>{{ job["period"] }}</span>
+                            <div class="p-title">{{ job.title }}</div>
+                            <span>{{ job.date_start }} - {{ job.date_end }}</span>
                         </div>
                         <div class="list-content">
-                            <span>{{ job["detail"] }}</span>
+                            <span>{{ job.location }}</span>
                         </div>
                     </div>
                     {% endfor %}

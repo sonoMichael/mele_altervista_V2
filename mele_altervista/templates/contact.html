@@ -9,7 +9,7 @@
         {% for con in contacts %}
         <a class="contact-container" href="{{ con.url }}">
             <div class="contact-img-container">
-                <img src="{{ con.image }}" class="contact-img">
+                <img src="data:image/png;charset=utf.8;base64,{{ con.image }}" class="contact-img">
             </div>
             <div class="contact-content">{{ con.title }}</div>
         </a>
