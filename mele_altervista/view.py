@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 from mele_altervista import app
-from database import *
+from mele_altervista  import database
 
 home_btns = ["about", "projects", "contact"]
 
@@ -14,8 +14,8 @@ def home():
 
 @app.route("/about")
 def about():
-    description = load_description_from_db()
-    jobs = load_jobs_from_db()
+    description = database.load_description_from_db()
+    jobs = database.load_jobs_from_db()
     return render_template("about.html",
                            title = "About",
                            description = description,
@@ -23,14 +23,14 @@ def about():
 
 @app.route("/projects")
 def projects():
-    projects = load_projects_from_db()
+    projects = database.load_projects_from_db()
     return render_template("projects.html",
                            title = "Projects",
                            projects = projects)
 
 @app.route("/contact")
 def contact():
-    contacts = load_contacts_from_db()
+    contacts = database.load_contacts_from_db()
     return render_template("contact.html",
                            title = "Contact",
                            contacts = contacts)
