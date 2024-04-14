@@ -8,15 +8,15 @@
     </div>
     <div class="page-content-container">
         {% for proj in projects %}
-        <div class="project-container">
+        <a href="{{ proj.url }}" class="project-container">
             <div class="project-img-container">
                 <img src="data:image/png;charset=utf.8;base64,{{ proj.image }}" class="project-img">
             </div>
             <div class="project-content-container">
-                <a href="{{ proj.url }}" class="project-title">{{ proj.title }}</a>
+                <div cldivss="project-title">{{ proj.title }}</div>
                 <div class="project-content">{{ proj.detail }}</div>
             </div>
-        </div>
+        </a>
         {% endfor %}
     </div>
 </div>
