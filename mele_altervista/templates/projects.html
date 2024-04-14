@@ -10,7 +10,7 @@
         {% for proj in projects %}
         <div class="project-container">
             <div class="project-img-container">
-                <img src="{{ proj.img }}" class="project-img">
+                <img src="data:image/png;charset=utf.8;base64,{{ proj.image }}" class="project-img">
             </div>
             <div class="project-content-container">
                 <a href="#" class="project-title">{{ proj.title }}</a>
